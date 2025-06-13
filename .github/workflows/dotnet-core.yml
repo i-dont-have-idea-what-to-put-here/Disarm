@@ -40,7 +40,7 @@ jobs:
                 run: dotnet restore /p:VersionSuffix=${{ steps.set-vars.outputs.versionString }}
             -   name: Build all
                 run: dotnet build -c Release /p:VersionSuffix=${{ steps.set-vars.outputs.versionString }}
-                working-directory: Disarm.Tests
+                working-directory: Disarm
             - name: Upload Disarm
               uses: actions/upload-artifact@v4
               with:
